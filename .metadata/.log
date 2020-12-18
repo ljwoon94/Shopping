@@ -643,3 +643,123 @@ java.lang.NullPointerException
 	at java.util.concurrent.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1056)
 	at java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1692)
 	at java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:157)
+
+!ENTRY org.eclipse.wst.html.ui 1 1 2020-12-18 11:11:57.016
+!MESSAGE No line style provider for org.eclipse.wst.html.SCRIPT
+
+!ENTRY org.eclipse.wst.html.ui 1 1 2020-12-18 11:11:57.021
+!MESSAGE No line style provider for org.eclipse.wst.html.SCRIPT
+
+!ENTRY org.eclipse.wst.html.ui 1 1 2020-12-18 11:12:07.573
+!MESSAGE No line style provider for org.eclipse.wst.html.SCRIPT
+
+!ENTRY org.eclipse.wst.html.ui 1 1 2020-12-18 11:12:07.573
+!MESSAGE No line style provider for org.eclipse.wst.html.SCRIPT
+
+!ENTRY org.eclipse.wst.html.ui 1 1 2020-12-18 11:12:07.574
+!MESSAGE No line style provider for org.eclipse.wst.html.SCRIPT
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2020-12-18 14:13:25.194
+!MESSAGE The POM for javax.servlet.jsp.jstl:jstl:jar:1.2 is missing, no dependency information available
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2020-12-18 14:13:25.479
+!MESSAGE The POM for javax.servlet.jsp.jstl:jstl:jar:1.2 is missing, no dependency information available
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-12-18 14:13:26.645
+!MESSAGE exists = true open = true => deleted = false
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-12-18 14:13:26.653
+!MESSAGE classpath=85 entries
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-12-18 14:13:26.659
+!MESSAGE buffering callback sts4.classpath.rdJGOHhf Shopping false 84
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-12-18 14:13:26.660
+!MESSAGE executing callback sts4.classpath.rdJGOHhf 1 batched events
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-12-18 14:13:26.670
+!MESSAGE executing callback sts4.classpath.rdJGOHhf SUCCESS [done]
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2020-12-18 14:13:27.267
+!MESSAGE The POM for javax.servlet.jsp.jstl:jstl:jar:1.2 is missing, no dependency information available
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-12-18 14:13:29.191
+!MESSAGE exists = true open = true => deleted = false
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-12-18 14:13:29.197
+!MESSAGE classpath=85 entries
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-12-18 14:13:29.200
+!MESSAGE buffering callback sts4.classpath.rdJGOHhf Shopping false 84
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-12-18 14:13:29.200
+!MESSAGE executing callback sts4.classpath.rdJGOHhf 1 batched events
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-12-18 14:13:29.204
+!MESSAGE executing callback sts4.classpath.rdJGOHhf SUCCESS [done]
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-12-18 14:14:30.081
+!MESSAGE exists = true open = true => deleted = false
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-12-18 14:14:30.087
+!MESSAGE classpath=87 entries
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-12-18 14:14:30.092
+!MESSAGE buffering callback sts4.classpath.rdJGOHhf Shopping false 87
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-12-18 14:14:30.092
+!MESSAGE executing callback sts4.classpath.rdJGOHhf 1 batched events
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-12-18 14:14:30.097
+!MESSAGE executing callback sts4.classpath.rdJGOHhf SUCCESS [done]
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-12-18 14:14:34.529
+!MESSAGE exists = true open = true => deleted = false
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-12-18 14:14:34.542
+!MESSAGE classpath=87 entries
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-12-18 14:14:34.551
+!MESSAGE buffering callback sts4.classpath.rdJGOHhf Shopping false 87
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-12-18 14:14:34.553
+!MESSAGE executing callback sts4.classpath.rdJGOHhf 1 batched events
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-12-18 14:14:34.566
+!MESSAGE executing callback sts4.classpath.rdJGOHhf SUCCESS [done]
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-12-18 14:16:44.315
+!MESSAGE exists = true open = true => deleted = false
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-12-18 14:16:44.321
+!MESSAGE classpath=85 entries
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-12-18 14:16:44.325
+!MESSAGE buffering callback sts4.classpath.rdJGOHhf Shopping false 85
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-12-18 14:16:44.325
+!MESSAGE executing callback sts4.classpath.rdJGOHhf 1 batched events
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-12-18 14:16:44.331
+!MESSAGE executing callback sts4.classpath.rdJGOHhf SUCCESS [done]
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-12-18 14:16:57.464
+!MESSAGE ClasspathListenerHandler removeClasspathListener sts4.classpath.rdJGOHhf
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-12-18 14:16:57.465
+!MESSAGE unsubscribing from classpath changes: sts4.classpath.rdJGOHhf
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-12-18 14:16:57.465
+!MESSAGE subsribers = {}
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-12-18 14:16:57.465
+!MESSAGE ClasspathListenerHandler removeClasspathListener sts4.classpath.rdJGOHhf => OK
+
+!ENTRY org.eclipse.wst.html.ui 1 1 2020-12-18 14:18:05.905
+!MESSAGE No line style provider for org.eclipse.wst.html.SCRIPT
+
+!ENTRY org.eclipse.wst.html.ui 1 1 2020-12-18 14:18:05.906
+!MESSAGE No line style provider for org.eclipse.wst.html.SCRIPT
+
+!ENTRY org.eclipse.wst.html.ui 1 1 2020-12-18 14:18:05.907
+!MESSAGE No line style provider for org.eclipse.wst.html.SCRIPT
