@@ -972,3 +972,15 @@ This warning can be switched off on the Team > Git > Confirmations and Warnings 
 
 !ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-12-19 11:02:37.796
 !MESSAGE executing callback sts4.classpath.tjcYKvBp SUCCESS [done]
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-12-19 16:53:58.196
+!MESSAGE ClasspathListenerHandler removeClasspathListener sts4.classpath.nFRugSMb
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-12-19 16:53:58.197
+!MESSAGE unsubscribing from classpath changes: sts4.classpath.nFRugSMb
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-12-19 16:53:58.197
+!MESSAGE subsribers = {}
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-12-19 16:53:58.197
+!MESSAGE ClasspathListenerHandler removeClasspathListener sts4.classpath.nFRugSMb => OK
