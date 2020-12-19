@@ -5,7 +5,7 @@
 <div align="center">
 	<table>
 		<tr>
-			<td widtj="80"><a href="/"><sping:message code="header.home"/></a></td>
+			<td width="80"><a href="/"><spring:message code="header.home"/></a></td>
 		</tr>
 	</table>
 </div>
