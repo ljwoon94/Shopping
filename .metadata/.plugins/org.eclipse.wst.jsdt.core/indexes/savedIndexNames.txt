@@ -1,8 +1,14 @@
 INDEX VERSION 1.4+C:\job\shopping\.metadata\.plugins\org.eclipse.wst.jsdt.core\indexes
 1838438421.index
 954222747.index
+<<<<<<< HEAD
 360640458.index
 724323601.index
 1754642729.index
 2504459299.index
 314713694.index
+=======
+314713694.index
+2504459299.index
+360640458.index
+>>>>>>> Tiles
