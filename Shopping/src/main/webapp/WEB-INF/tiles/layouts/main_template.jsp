@@ -8,7 +8,8 @@
 <title><tiles:getAsString name="title"/></title>
 </head>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-<body>
+
+ <body>
 
 	<tiles:insertAttribute name="header"/>
 	<tiles:insertAttribute name="menu"/>
