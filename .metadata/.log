@@ -5902,3 +5902,99 @@ Binding(CTRL+SHIFT+C,
 
 !ENTRY org.eclipse.ui 2 2 2020-12-26 10:45:06.768
 !MESSAGE Invalid property category path: org.springframework.ide.eclipse.beans.ui.properties.ProjectPropertyPage (bundle: org.springframework.ide.eclipse.xml.namespaces, propertyPage: org.springframework.ide.eclipse.beans.ui.namespaces.projectPropertyPage)
+
+!ENTRY org.eclipse.wst.html.ui 1 1 2020-12-26 15:46:13.501
+!MESSAGE No line style provider for org.eclipse.wst.html.SCRIPT
+
+!ENTRY org.eclipse.wst.html.ui 1 1 2020-12-26 15:46:13.509
+!MESSAGE No line style provider for org.eclipse.wst.html.SCRIPT
+
+!ENTRY org.eclipse.wst.html.ui 1 1 2020-12-26 15:46:16.353
+!MESSAGE No line style provider for org.eclipse.wst.html.SCRIPT
+
+!ENTRY org.eclipse.wst.html.ui 1 1 2020-12-26 15:46:16.353
+!MESSAGE No line style provider for org.eclipse.wst.html.SCRIPT
+
+!ENTRY org.eclipse.wst.html.ui 1 1 2020-12-26 15:46:16.353
+!MESSAGE No line style provider for org.eclipse.wst.html.SCRIPT
+
+!ENTRY org.eclipse.wst.html.ui 1 1 2020-12-26 15:46:20.813
+!MESSAGE No line style provider for org.eclipse.wst.html.SCRIPT
+
+!ENTRY org.eclipse.wst.html.ui 1 1 2020-12-26 15:46:20.814
+!MESSAGE No line style provider for org.eclipse.wst.html.SCRIPT
+
+!ENTRY org.eclipse.wst.html.ui 1 1 2020-12-26 15:46:20.814
+!MESSAGE No line style provider for org.eclipse.wst.html.SCRIPT
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-12-26 16:02:10.329
+!MESSAGE ClasspathListenerHandler removeClasspathListener sts4.classpath.DfcjmWqj
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-12-26 16:02:10.329
+!MESSAGE unsubscribing from classpath changes: sts4.classpath.DfcjmWqj
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-12-26 16:02:10.330
+!MESSAGE subsribers = {}
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-12-26 16:02:10.330
+!MESSAGE ClasspathListenerHandler removeClasspathListener sts4.classpath.DfcjmWqj => OK
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-12-26 16:02:17.036
+!MESSAGE Entering DelegatingStreamConnectionProvider()
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-12-26 16:02:17.036
+!MESSAGE DelegatingStreamConnectionProvider classloader = org.eclipse.osgi.internal.loader.EquinoxClassLoader@9730004[org.springframework.tooling.boot.ls:1.23.0.202010230633(id=986)]
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-12-26 16:02:17.036
+!MESSAGE SpringBootLanguageServer exists!
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-12-26 16:02:18.504
+!MESSAGE Boot LS startup time from start to initialized: 1467ms
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-12-26 16:02:18.562
+!MESSAGE ClasspathListenerHandler addClasspathListener sts4.classpath.MKyVzFphisBatched = true
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-12-26 16:02:18.563
+!MESSAGE Setting up ClasspathListenerManager
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-12-26 16:02:18.563
+!MESSAGE Scheduling initial event for all projects ...
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-12-26 16:02:18.563
+!MESSAGE Scheduling initial event for all projects DONE
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-12-26 16:02:18.563
+!MESSAGE exists = true open = true => deleted = false
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-12-26 16:02:18.564
+!MESSAGE ClasspathListenerHandler addClasspathListener sts4.classpath.MKyVzFph => OK
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-12-26 16:02:18.569
+!MESSAGE classpath=106 entries
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-12-26 16:02:18.573
+!MESSAGE buffering callback sts4.classpath.MKyVzFph Shopping false 106
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-12-26 16:02:18.574
+!MESSAGE executing callback sts4.classpath.MKyVzFph 1 batched events
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-12-26 16:02:18.596
+!MESSAGE executing callback sts4.classpath.MKyVzFph SUCCESS [done]
+
+!ENTRY org.eclipse.wst.html.ui 1 1 2020-12-26 16:06:41.083
+!MESSAGE No line style provider for org.eclipse.wst.html.SCRIPT
+
+!ENTRY org.eclipse.wst.html.ui 1 1 2020-12-26 16:06:41.084
+!MESSAGE No line style provider for org.eclipse.wst.html.SCRIPT
+
+!ENTRY org.eclipse.wst.html.ui 1 1 2020-12-26 16:06:41.084
+!MESSAGE No line style provider for org.eclipse.wst.html.SCRIPT
+
+!ENTRY org.eclipse.wst.html.ui 1 1 2020-12-26 16:08:13.870
+!MESSAGE No line style provider for org.eclipse.wst.html.SCRIPT
+
+!ENTRY org.eclipse.wst.html.ui 1 1 2020-12-26 16:08:13.870
+!MESSAGE No line style provider for org.eclipse.wst.html.SCRIPT
+
+!ENTRY org.eclipse.wst.html.ui 1 1 2020-12-26 16:08:13.871
+!MESSAGE No line style provider for org.eclipse.wst.html.SCRIPT
