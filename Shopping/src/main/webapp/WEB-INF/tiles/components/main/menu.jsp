@@ -5,10 +5,9 @@
 <div align="center">
 	<table>
 		<tr>
+			<!-- 홈 -->
 			<td width="80"><a href="/"><spring:message code="header.home"/></a></td>
-		</tr>
-		<!-- 코드그룹 관리 메뉴 -->
-		<tr>
+			<!-- 코드그룹 관리 메뉴 -->
 			<td width="120"><a href="/codegroup/list"><spring:message code="menu.codegroup.list"/></a></td>
 		</tr>
 	</table>

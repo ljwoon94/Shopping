@@ -1,18 +1,16 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
-<%@ taglib prefix="spring" uri="http://www.springframework.org/tags"%>
-
+<%@ taglib prefix="spring" uri="http://www.springframework.org/tags"%>    
 <!DOCTYPE html>
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<title></title>
 </head>
 <body>
-<h2><spring:message code="codegroup.header.register"/></h2>
-
-<form:form modelAttribute="codeGroup" action="register">
+<h2><spring:message code="codegroup.header.modify"/></h2>
+<form:form modelAttribute="codeGroup" action = "modify">
 	<table>
 		<tr>
 			<td><spring:message code="codegroup.groupCode"/></td>
@@ -25,31 +23,25 @@
 			<td><font color="red"><form:errors path="groupName"/></font></td>
 		</tr>
 	</table>
-
 </form:form>
 
 <div>
-	<button type="submit" id="btnRegister">
-		<spring:message code = "action.register"/>
-	</button>
-	<button type="submit" id="btnList">
-		<spring:message code="action.list"/>
-	</button>
+	<button type="submit" id="btnModify"><spring:message code="action.modify"/></button>
+	<button type="submit" id="btnList"><spring:message code="action.list"/></button>	
 </div>
 
 <script>
 	$(document).ready(function(){
-		var formObj = $("#codeGroup");
-	
-		$("#btnRegister").on("click",function(){
+		var formObj=$("#codeGroup");
+		$("#btnModify").on("click",function(){
 			formObj.submit();
 		});
-			
+		
 		$("#btnList").on("click",function(){
 			self.location="list";
-		});	
+		});
+		
 	});
-
 </script>
 
 </body>

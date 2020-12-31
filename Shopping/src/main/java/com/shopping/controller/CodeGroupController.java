@@ -29,7 +29,7 @@ public class CodeGroupController {
 	@PostMapping(value="/register")
 	public String register(CodeGroup codeGroup, RedirectAttributes rttr) throws Exception{
 		service.register(codeGroup);
-		rttr.addFlashAttribute("msg","success");
+		rttr.addFlashAttribute("msg","SUCCESS");
 		return "redirect:/codegroup/list";
 	}
 	
@@ -44,5 +44,26 @@ public class CodeGroupController {
 	public void read(String groupCode,Model model) throws Exception{
 		model.addAttribute(service.read(groupCode));
 	}
-
+	
+	//코드 그룹 수정 화면
+	@GetMapping(value="/modify")
+	public void modifyForm(String groupCode, Model model) throws Exception{
+		model.addAttribute(service.read(groupCode));
+	}
+	
+	//코드 그룹 수정
+	@PostMapping(value="/modify")
+	public String modify(CodeGroup codeGroup, RedirectAttributes rttr) throws Exception{
+		service.modify(codeGroup);
+		rttr.addFlashAttribute("msg","SUCCESS");
+		return "redirect:/codegroup/list";	
+	}
+	
+	//코드 그룹 삭제
+	@PostMapping(value="/remove")
+	public String remove(String groupCode, RedirectAttributes rttr) throws Exception{
+		service.remove(groupCode);
+		rttr.addFlashAttribute("msg","SUCCESS");
+		return "redirect:/codegroup/list";
+	}
 }
