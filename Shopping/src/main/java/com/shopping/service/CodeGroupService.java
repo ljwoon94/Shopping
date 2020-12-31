@@ -9,4 +9,6 @@ public interface CodeGroupService {
 	public void register(CodeGroup codeGroup) throws Exception;
 	//그룹코드목록
 	public List<CodeGroup> list() throws Exception;
+	//상세화면
+	public CodeGroup read(String groupCode) throws Exception;
 }

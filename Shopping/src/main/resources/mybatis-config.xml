@@ -8,6 +8,7 @@
 		<setting name = "mapUnderscoreToCamelCase" value="true"/>
 	</settings>
 	<typeAliases>
+	<!-- TypeAlias로 맵핑 파일에서 반복적으로 사용될 패키지의 이름을 정의  -->
 		<package name="com.shopping.domain"/>
 	</typeAliases>
 </configuration>

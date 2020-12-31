@@ -18,21 +18,31 @@ public class CodeGroupController {
 	@Autowired
 	private CodeGroupService service;
 	
-	//코드 등록 화면
+	//코드그룹 등록 화면
 	@GetMapping(value="/register")
 	public void registerForm(Model model) throws Exception{
 		CodeGroup codeGroup = new CodeGroup();
 		model.addAttribute(codeGroup);
 	}
 	
+	//코드그룹 등록
 	@PostMapping(value="/register")
 	public String register(CodeGroup codeGroup, RedirectAttributes rttr) throws Exception{
 		service.register(codeGroup);
 		rttr.addFlashAttribute("msg","success");
 		return "redirect:/codegroup/list";
 	}
+	
+	//코드그룹 목록 화면
 	@GetMapping(value="/list")
 	public void list(Model model) throws Exception{
 		model.addAttribute("list",service.list());
 	}
+	
+	//상세 화면
+	@GetMapping(value="/read")
+	public void read(String groupCode,Model model) throws Exception{
+		model.addAttribute(service.read(groupCode));
+	}
+
 }
