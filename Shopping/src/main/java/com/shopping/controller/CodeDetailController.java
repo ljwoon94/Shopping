@@ -24,7 +24,7 @@ public class CodeDetailController {
 	@Autowired
 	private CodeService codeService;
 	
-	//등록화면
+	//코드 등록 화면
 	@GetMapping(value="/register")
 	public void registerForm(Model model) throws Exception{
 		CodeDetail codeDetail = new CodeDetail();
@@ -34,17 +34,25 @@ public class CodeDetailController {
 		List<CodeLabelValue> groupCodeList= codeService.getCodeGroupList();
 		model.addAttribute("groupCodeList",groupCodeList);
 	}
-	
+	//코드 등록 처리
 	@PostMapping(value="/register")
 	public String register(CodeDetail codeDetail, RedirectAttributes rttr) throws Exception{
 		codeDetailService.register(codeDetail);
 		rttr.addFlashAttribute("msg","SUCCESS");
 		return "redirect:/codedetail/list";
 	}
-	
+	//목록
 	@GetMapping(value="/list")
 	public void list(Model model) throws Exception{
 		model.addAttribute("list",codeDetailService.list());
 	}
 	
+	//상세화면
+	@GetMapping(value="/read")
+	public void read(CodeDetail codeDetail, Model model) throws Exception{
+		model.addAttribute(codeDetailService.read(codeDetail));
+		//그룹코드 목록을 조회하여 뷰에 전달
+		List<CodeLabelValue> groupCodeList = codeService.getCodeGroupList();
+		model.addAttribute("groupCodeList", groupCodeList);
+	}
 }

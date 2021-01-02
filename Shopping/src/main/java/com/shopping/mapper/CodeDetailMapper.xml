@@ -34,4 +34,16 @@
 		ORDER BY group_code ASC,
 			sort_seq ASC
 	</select>
+	
+	<select id="read" resultType="CodeDetail">
+		SELECT group_code,
+			code_value,
+			code_name,
+			sort_seq,
+			use_yn,
+			reg_date
+		FROM code_detail
+		WHERE group_code = #{groupCode}
+		AND code_value = #{codeValue}
+	</select>
 </mapper>
