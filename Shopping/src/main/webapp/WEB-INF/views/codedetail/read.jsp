@@ -39,7 +39,7 @@
 <script>
 	$(document).ready(function(){
 		var formObj = $("#codeDetail");
-		$("btnEdit").on("click",function(){
+		$("#btnEdit").on("click",function(){
 			formObj.attr("action","/codedetail/modify");
 			formObj.attr("method","get");
 			formObj.submit();
@@ -47,9 +47,9 @@
 			var groupCode=$("#groupCode");
 			var groupCodeVal = groupCode.val();
 			var codeValue = $("#codeValue");
-			var CodeValueVal = codeValue.val();
+			var codeValueVal = codeValue.val();
 			
-			self.location = "modify?groupCode=" +groupCodeVal+ "&" + "codeValue=" + codeValueVal;
+			self.location = "modify?groupCode="+groupCodeVal+"&"+"codeValue="+ codeValueVal;
 		});
 		
 		$("#btnRemove").on("click",function(){

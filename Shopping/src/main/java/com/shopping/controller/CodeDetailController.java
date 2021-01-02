@@ -55,4 +55,20 @@ public class CodeDetailController {
 		List<CodeLabelValue> groupCodeList = codeService.getCodeGroupList();
 		model.addAttribute("groupCodeList", groupCodeList);
 	}
+	
+	//코드 수정 화면
+	@GetMapping(value="/modify")
+	public void modifyForm(CodeDetail codeDetail, Model model) throws Exception{
+		model.addAttribute(codeDetailService.read(codeDetail));
+		//그룹코드 목록을 조회하여 뷰에 전달
+		List<CodeLabelValue> groupCodeList = codeService.getCodeGroupList();
+		model.addAttribute("groupCodeList", groupCodeList);
+	}	
+	//코드 수정
+	@PostMapping(value="/modify")
+	public String modify(CodeDetail codeDetail,RedirectAttributes rttr) throws Exception{
+		codeDetailService.modify(codeDetail);
+		rttr.addFlashAttribute("msg","SUCCESS");
+		return "redirect:/codedetail/list";
+	}
 }

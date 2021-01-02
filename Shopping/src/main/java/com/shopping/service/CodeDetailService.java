@@ -11,4 +11,6 @@ public interface CodeDetailService {
 	public List<CodeDetail> list() throws Exception;
 	//상세화면
 	public CodeDetail read(CodeDetail codeDetail) throws Exception;
+	//코드 수정
+	public void modify(CodeDetail codeDetail) throws Exception;
 }

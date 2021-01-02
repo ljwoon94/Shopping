@@ -13,5 +13,7 @@ public interface CodeDetailMapper {
 	public List<CodeDetail> list() throws Exception;
 	//상세화면
 	public CodeDetail read(CodeDetail codeDetail) throws Exception;
+	//수정처리
+	public void update(CodeDetail codeDetail) throws Exception;
 	
 }
