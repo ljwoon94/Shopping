@@ -8213,3 +8213,54 @@ org.eclipse.wst.xml.core.internal.document.StructuredDocumentRegionManagementExc
 
 !ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-01-02 15:17:13.018
 !MESSAGE ClasspathListenerHandler removeClasspathListener sts4.classpath.oYeGPYyB => OK
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-01-02 15:19:07.123
+!MESSAGE Entering DelegatingStreamConnectionProvider()
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-01-02 15:19:07.123
+!MESSAGE DelegatingStreamConnectionProvider classloader = org.eclipse.osgi.internal.loader.EquinoxClassLoader@720d5d1b[org.springframework.tooling.boot.ls:1.23.0.202010230633(id=986)]
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-01-02 15:19:07.123
+!MESSAGE SpringBootLanguageServer exists!
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-01-02 15:19:08.577
+!MESSAGE Boot LS startup time from start to initialized: 1452ms
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-01-02 15:19:08.630
+!MESSAGE ClasspathListenerHandler addClasspathListener sts4.classpath.OovmbejpisBatched = true
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-01-02 15:19:08.631
+!MESSAGE Setting up ClasspathListenerManager
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-01-02 15:19:08.631
+!MESSAGE Scheduling initial event for all projects ...
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-01-02 15:19:08.631
+!MESSAGE Scheduling initial event for all projects DONE
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-01-02 15:19:08.632
+!MESSAGE exists = true open = true => deleted = false
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-01-02 15:19:08.632
+!MESSAGE ClasspathListenerHandler addClasspathListener sts4.classpath.Oovmbejp => OK
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-01-02 15:19:08.636
+!MESSAGE classpath=117 entries
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-01-02 15:19:08.639
+!MESSAGE buffering callback sts4.classpath.Oovmbejp Shopping false 117
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-01-02 15:19:08.639
+!MESSAGE executing callback sts4.classpath.Oovmbejp 1 batched events
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-01-02 15:19:08.658
+!MESSAGE executing callback sts4.classpath.Oovmbejp SUCCESS [done]
+
+!ENTRY org.eclipse.wst.html.ui 1 1 2021-01-02 15:57:27.325
+!MESSAGE No line style provider for org.eclipse.wst.html.SCRIPT
+
+!ENTRY org.eclipse.wst.html.ui 1 1 2021-01-02 15:57:27.326
+!MESSAGE No line style provider for org.eclipse.wst.html.SCRIPT
+
+!ENTRY org.eclipse.wst.html.ui 1 1 2021-01-02 15:57:27.326
+!MESSAGE No line style provider for org.eclipse.wst.html.SCRIPT
