@@ -41,4 +41,9 @@ public class CodeDetailServiceImpl implements CodeDetailService {
 	
 		mapper.update(codeDetail);
 	}
+	@Override
+	public void remove(CodeDetail codeDetail) throws Exception {
+		// TODO Auto-generated method stub
+		mapper.delete(codeDetail);
+	}
 }

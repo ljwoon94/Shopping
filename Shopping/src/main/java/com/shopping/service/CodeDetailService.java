@@ -13,4 +13,6 @@ public interface CodeDetailService {
 	public CodeDetail read(CodeDetail codeDetail) throws Exception;
 	//코드 수정
 	public void modify(CodeDetail codeDetail) throws Exception;
+	//코드 삭제
+	public void remove(CodeDetail codeDetail) throws Exception; 
 }

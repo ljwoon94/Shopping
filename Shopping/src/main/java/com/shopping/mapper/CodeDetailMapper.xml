@@ -50,8 +50,14 @@
 	<!-- 코드 수정 -->
 	<update id="update">
 		UPDATE code_detail
-		SET code_name =#{codeName}
-		WHERE group_code =#{groupCode}
-		AND code_value =#{codeValue}
+		SET code_name = #{codeName}
+		WHERE group_code = #{groupCode}
+		AND code_value = #{codeValue}
 	</update>
+	<!-- 코드 삭제 -->
+	<delete id="delete">
+		DELETE FROM code_detail
+		WHERE group_code = #{groupCode}
+		AND code_value = #{codeValue}
+	</delete>
 </mapper>

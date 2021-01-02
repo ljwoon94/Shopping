@@ -71,4 +71,11 @@ public class CodeDetailController {
 		rttr.addFlashAttribute("msg","SUCCESS");
 		return "redirect:/codedetail/list";
 	}
+	//코드 삭제
+	@PostMapping(value="/remove")
+	public String remove(CodeDetail codeDetail, RedirectAttributes rttr) throws Exception{
+		codeDetailService.remove(codeDetail);
+		rttr.addFlashAttribute("msg", "SUCCESS");
+		return "redirect:/codedetail/list";
+	}
 }
