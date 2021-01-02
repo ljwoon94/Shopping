@@ -8,14 +8,14 @@ CREATE TABLE code_group(
 );
 
 CREATE TABLE code_detail(
-	class_code char(3) NOT NULL,
+	group_code char(3) NOT NULL,
     code_value VARCHAR(3) NOT NULL,
     code_name VARCHAR(30) NOT NULL,
     sort_seq INT NOT NULL,
     use_yn CHAR(1) NOT NULL DEFAULT 'Y',
     reg_date TIMESTAMP NOT NULL DEFAULT now(),
     upd_date TIMESTAMP DEFAULT now(),
-    PRIMARY KEY (class_code,code_value)
+    PRIMARY KEY (group_code,code_value)
 );
 
 CREATE TABLE member(
@@ -149,3 +149,14 @@ CREATE TABLE performance_log(
     reg_date TIMESTAMP NOT NULL DEFAULT now(),
     PRIMARY KEY(log_no)
 );
+
+
+INSERT INTO code_detail(group_code, code_value,code_name,sort_seq) VALUES ('A01','00','___',1);
+INSERT INTO code_detail(group_code, code_value,code_name,sort_seq) VALUES ('A01','01','Developer',2);
+INSERT INTO code_detail(group_code, code_value,code_name,sort_seq) VALUES ('A01','02','Designer',3);
+INSERT INTO code_detail(group_code, code_value,code_name,sort_seq) VALUES ('A01','03','Architect',4);
+
+INSERT INTO code_detail(group_code, code_value,code_name,sort_seq) VALUES ('A02','00','___',1);
+INSERT INTO code_detail(group_code, code_value,code_name,sort_seq) VALUES ('A02','01','Movie',2);
+INSERT INTO code_detail(group_code, code_value,code_name,sort_seq) VALUES ('A02','02','Music',3);
+INSERT INTO code_detail(group_code, code_value,code_name,sort_seq) VALUES ('A02','03','Sports',4);
