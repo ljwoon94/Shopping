@@ -19,5 +19,11 @@ public class CodeServiceImpl implements CodeService {
 		// TODO Auto-generated method stub
 		return mapper.getCodeGroupList();
 	}
+	//지정된 그룹코드에 해당하는 코드 목록 조회
+	@Override
+	public List<CodeLabelValue> getCodeList(String groupCode) throws Exception {
+		// TODO Auto-generated method stub
+		return mapper.getCodeList(groupCode);
+	}
 
 }
