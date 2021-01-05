@@ -22,4 +22,7 @@ public interface MemberMapper {
 	public List<Member> list() throws Exception;
 	
 	public int countAll() throws Exception;
+	
+	//해당 사용자아이디를 가진 회원정보 조회
+	public Member readByUserId(String userId);
 }

@@ -105,4 +105,20 @@
 		FROM member
 	</select>
 	
+	<!-- 해당 사용자아이디를 가진 회원정보를 조회 -->
+	<select id = "readByUserId" resultMap="memberMap">
+		SELECT mem.user_no,
+			mem.user_id,
+			user_pw,
+			user_name,
+			job,
+			coin,
+			enabled,
+			reg_date,
+			upd_date,
+			auth 
+		FROM member mem LEFT OUTER JOIN member_auth auth 
+		ON mem.user_no = auth.user_no 
+		WHERE mem.user_id =#{userId}
+	</select>
 </mapper>

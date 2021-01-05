@@ -27,6 +27,7 @@ CREATE TABLE member(
     coin INT(10) DEFAULT 0,
     reg_date TIMESTAMP DEFAULT now(),
     upd_date TIMESTAMP DEFAULT now(),
+    enabled CHAR(1) DEFAULT '1',
     PRIMARY KEY(user_no)
 );
 
@@ -160,3 +161,4 @@ INSERT INTO code_detail(group_code, code_value,code_name,sort_seq) VALUES ('A02'
 INSERT INTO code_detail(group_code, code_value,code_name,sort_seq) VALUES ('A02','01','Movie',2);
 INSERT INTO code_detail(group_code, code_value,code_name,sort_seq) VALUES ('A02','02','Music',3);
 INSERT INTO code_detail(group_code, code_value,code_name,sort_seq) VALUES ('A02','03','Sports',4);
+
