@@ -21,4 +21,5 @@ public interface MemberMapper {
 	//목록화면
 	public List<Member> list() throws Exception;
 	
+	public int countAll() throws Exception;
 }

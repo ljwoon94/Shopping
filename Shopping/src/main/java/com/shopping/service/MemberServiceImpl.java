@@ -76,4 +76,21 @@ public class MemberServiceImpl implements MemberService {
 	public List<Member> list() throws Exception{
 		return mapper.list();
 	}
+	//회원 테이블의 데이터 건수를 반환한다.
+	@Override
+	public int countAll() throws Exception {
+		// TODO Auto-generated method stub
+		return mapper.countAll();
+	}
+	
+	//최초 관리자 생성
+	@Override
+	public void setupAdmin(Member member) throws Exception {
+		// TODO Auto-generated method stub
+		mapper.create(member);
+		MemberAuth memberAuth = new MemberAuth();
+		memberAuth.setUserNo(member.getUserNo());
+		memberAuth.setAuth("ROLE_ADMIN");
+		mapper.createAuth(memberAuth);
+	}
 }

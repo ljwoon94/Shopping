@@ -6,13 +6,7 @@
 <!--sec는 시큐리티 태크이다. 관리자 권한이 있다면 관리자 페이지 링크를 보여주거나,
  	로그인에 성공해서 특정 권한을 획득한 사용자에게는 로그인 버튼 대신 로그아웃 버튼을 
  	보여주는 등의 로직을 사용할 수 있다. -->
-<!DOCTYPE html>
-<html>
-<head>
-<meta charset="UTF-8">
-<title></title>
-</head>
-<body>
+
 <h2><spring:message code="user.header.register"/></h2>
 <form:form modelAttribute="member" action="register">
 	<table>
@@ -56,14 +50,10 @@
 		$("#btnRegister").on("click",function(){
 			formObj.submit();
 		});
-	
 	<sec:authorize access="hasRole('ROLE_ADMIN')">
 		$("#btnList")on("click",function(){
 			self.location="list";
 		});
 	</sec:authorize>
-		
 	});
 </script>
-</body>
-</html>
