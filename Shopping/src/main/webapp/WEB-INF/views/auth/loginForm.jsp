@@ -11,7 +11,7 @@
 <h2>
 	<c:out value="${logout}"/>
 </h2>
-<form action ="/login" method="post">
+<form method="post" action="/login">
 	<table>
 		<tr>
 			<td>아이디</td>

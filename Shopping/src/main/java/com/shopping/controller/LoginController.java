@@ -8,8 +8,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @RequestMapping("/auth")
 public class LoginController {
 
-	//등록화면
-	@RequestMapping(value="/login")
+	//로그인
+	@RequestMapping("/login")
 	public String loginForm(String error, String logout, Model model) {
 		if(error!=null) {
 			model.addAttribute("error","Login Error!!!");
@@ -18,5 +18,11 @@ public class LoginController {
 			model.addAttribute("logout","Logout!!");
 		}
 		return "auth/loginForm";
+	}
+	
+	//로그아웃
+	@RequestMapping("/logout")
+	public String loginForm() {
+		return "auth/logoutForm";
 	}
 }

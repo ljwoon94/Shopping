@@ -27,6 +27,6 @@ public class Member {
 	private int coin;
 	private boolean enabled;
 	private Date regDate;
-	private Date update;
+	private Date updDate;
 	private List<MemberAuth> authList;
 }

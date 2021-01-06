@@ -51,7 +51,7 @@
 			formObj.submit();
 		});
 	<sec:authorize access="hasRole('ROLE_ADMIN')">
-		$("#btnList")on("click",function(){
+		$("#btnList").on("click",function(){
 			self.location="list";
 		});
 	</sec:authorize>
