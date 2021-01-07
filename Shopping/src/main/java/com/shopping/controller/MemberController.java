@@ -71,7 +71,7 @@ public class MemberController {
 	
 	//회원 목록 화면
 	@GetMapping(value="/list")
-	@PreAuthorize("hasRole(ROLE_ADMIN')")
+	@PreAuthorize("hasRole('ROLE_ADMIN')")
 	public void list(Model model) throws Exception{
 		model.addAttribute("list",service.list());
 	}
@@ -88,6 +88,7 @@ public class MemberController {
 	
 	//회원 삭제 처리
 	@PostMapping(value="/remove")
+	@PreAuthorize("hasRole('ROLE_ADMIN')")
 	public String remove(int userNo,RedirectAttributes rttr) throws Exception{
 		service.remove(userNo);
 		rttr.addFlashAttribute("msg","SUCCESS");
