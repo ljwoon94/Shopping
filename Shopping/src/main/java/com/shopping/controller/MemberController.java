@@ -3,6 +3,7 @@ package com.shopping.controller;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -70,6 +71,7 @@ public class MemberController {
 	
 	//회원 목록 화면
 	@GetMapping(value="/list")
+	@PreAuthorize("hasRole(ROLE_ADMIN')")
 	public void list(Model model) throws Exception{
 		model.addAttribute("list",service.list());
 	}

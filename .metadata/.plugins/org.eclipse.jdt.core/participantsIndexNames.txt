@@ -1,7 +1,3 @@
 INDEX VERSION 1.131
 C:\job\shopping\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\3332081898.index
 \Shopping\src\main\java
-C:\job\shopping\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\3891723035.index
-\Shopping\src\main\java
-C:\job\shopping\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\2461768971.index
-\Shopping\src\main\java
