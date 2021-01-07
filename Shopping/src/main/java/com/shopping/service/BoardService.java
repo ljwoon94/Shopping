@@ -1,9 +1,13 @@
 package com.shopping.service;
 
+import java.util.List;
+
 import com.shopping.domain.Board;
 
 public interface BoardService {
 
 	public void register(Board board) throws Exception;
+
+	public List<Board> list() throws Exception;
 
 }

@@ -41,4 +41,9 @@ public class BoardController {
 		rttr.addFlashAttribute("msg","SUCCESS");
 		return "redirect:/board/list";
 	}
+	
+	@GetMapping(value="/list")
+	public void list(Model model) throws Exception{
+		model.addAttribute("list",service.list());
+	}
 }
