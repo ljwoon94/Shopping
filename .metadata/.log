@@ -10628,3 +10628,24 @@ Binding(CTRL+SHIFT+C,
 
 !ENTRY org.eclipse.wst.html.ui 1 1 2021-01-07 15:51:50.127
 !MESSAGE No line style provider for org.eclipse.wst.html.SCRIPT
+
+!ENTRY org.eclipse.wst.html.ui 1 1 2021-01-07 16:07:45.047
+!MESSAGE No line style provider for org.eclipse.wst.html.SCRIPT
+
+!ENTRY org.eclipse.wst.html.ui 1 1 2021-01-07 16:07:45.047
+!MESSAGE No line style provider for org.eclipse.wst.html.SCRIPT
+
+!ENTRY org.eclipse.wst.html.ui 1 1 2021-01-07 16:07:45.048
+!MESSAGE No line style provider for org.eclipse.wst.html.SCRIPT
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-01-07 21:49:11.452
+!MESSAGE ClasspathListenerHandler removeClasspathListener sts4.classpath.HKByGvpI
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-01-07 21:49:11.452
+!MESSAGE unsubscribing from classpath changes: sts4.classpath.HKByGvpI
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-01-07 21:49:11.453
+!MESSAGE subsribers = {}
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-01-07 21:49:11.453
+!MESSAGE ClasspathListenerHandler removeClasspathListener sts4.classpath.HKByGvpI => OK

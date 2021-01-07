@@ -6,4 +6,3 @@ INDEX VERSION 1.4+C:\job\shopping\.metadata\.plugins\org.eclipse.wst.jsdt.core\i
 954222747.index
 314713694.index
 360640458.index
-3332081898.index

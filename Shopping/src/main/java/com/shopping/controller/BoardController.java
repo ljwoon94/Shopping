@@ -34,7 +34,7 @@ public class BoardController {
 		board.setWriter(member.getUserId());
 		model.addAttribute(board);
 	}
-	@PostMapping(value="register")
+	@PostMapping(value="/register")
 	@PreAuthorize("hasRole('ROLE_MEMBER')")
 	public String register(Board board, RedirectAttributes rttr) throws Exception{
 		service.register(board);
