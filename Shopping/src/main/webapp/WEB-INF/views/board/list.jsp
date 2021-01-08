@@ -31,7 +31,7 @@
 			<c:forEach items="${list}" var="board">
 				<tr>
 					<td align="center">${board.boardNo}</td>
-					<td align="left"><a href ='/board/read?boardNo=${board.boardNo}'>${board.title}</a></td>
+					<td align="left"><a href ="/board/read${pgrq.toUriString()}&boardNo=${board.boardNo}"><c:out value="${board.title}"/></a></td>
 					<td align="right">${board.writer}</td>
 					<td align="center"><fmt:formatDate pattern="yyyy-MM-dd HH:mm" value="${board.regDate}"/></td>
 				</tr>
@@ -39,6 +39,20 @@
 		</c:otherwise>
 	</c:choose>
 </table>
+
+<div>
+	<c:if test="${pagination.prev}">
+		<a href="/board/list${pgrq.toUriStringByPage(padination.startPage-1)}">PREV</a>
+	</c:if>
+	
+	<c:forEach begin="${pagination.startPage}" end="${pagination.endPage}" var ="idx">
+		<a href="/board/list${pgrq.toUriStringByPage(idx) }">${idx }</a>
+	</c:forEach>
+	
+	<c:if test="${pagination.next&&pagination.endPage > 0 }">
+		<a href="/board/list${pgrq.toUriStringByPage(pagination.endPage+1) }">NEXT</a>
+	</c:if>
+</div>
 
 <script>
 	var result ="${msg}";

@@ -9,6 +9,8 @@
 
 <form:form modelAttribute="board" action="modify">
 	<form:hidden path="boardNo"/>
+	<!-- 현재 페이지 번호를 숨겨진 피드  -->
+	<input type="hidden" name="page" value="${pgrq.page }">
 	<table>
 		<tr>
 			<td><spring:message code="board.title"/></td>
@@ -54,7 +56,7 @@
 		});
 		
 		$("#btnList").on("click",function(){
-			self.location="list";
+			self.location="list${pgrq.toUriString()}";
 		});
 	});
 </script>

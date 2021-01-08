@@ -9,6 +9,8 @@
 <form:form modelAttribute="board">
 	<form:hidden path="boardNo"/>
 	
+	<!-- 현재 페이지 번호를 숨겨진 피드  -->
+	<input type="hidden" name="page" value="${pgrq.page }">
 	<table>
 		<tr>
 			<td><spring:message code="board.title"/></td>
@@ -52,14 +54,14 @@
 			var boardNo = $("#boardNo");
 			var boardNoVal = boardNo.val();
 			
-			self.location = "/board/modify?boardNo=" + boardNoVal;
+			self.location = "/board/modify${pgrq.toUriString()}"+"&boardNo=" + boardNoVal;
 		});
 		$("#btnRemove").on("click",function(){
 			formObj.attr("action","/board/remove");
 			formObj.submit();
 		});
 		$("#btnList").on("click",function(){
-			self.location = "/board/list";
+			self.location = "/board/list${pgrq.toUriString()}";
 		});
 		
 	});

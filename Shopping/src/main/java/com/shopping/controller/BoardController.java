@@ -6,12 +6,15 @@ import org.springframework.security.core.Authentication;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import com.shopping.domain.Board;
 import com.shopping.domain.Member;
+import com.shopping.domain.PageRequest;
+import com.shopping.domain.Pagination;
 import com.shopping.security.domain.CustomUser;
 import com.shopping.service.BoardService;
 
@@ -43,28 +46,45 @@ public class BoardController {
 	}
 	
 	@GetMapping(value="/list")
-	public void list(Model model) throws Exception{
-		model.addAttribute("list",service.list());
+	public void list(@ModelAttribute("pgrq") PageRequest pageRequest, Model model) throws Exception{
+		//뷰에 페이징 처리를 한 게시글 목록을 전달한다.
+		model.addAttribute("list",service.list(pageRequest));
+		
+		//페이징 네비게이션 정보를 뷰에 전달한다.
+		Pagination pagination = new Pagination();
+		pagination.setPageRequest(pageRequest);
+		
+		pagination.setTotalCount(service.count());
+		model.addAttribute("pagination",pagination);
 	}
 	
 	//회원 게시글 상세화면
 	@GetMapping(value="/read")
-	public void read(int boardNo, Model model) throws Exception{
-		model.addAttribute(service.read(boardNo));
+	public void read(int boardNo,@ModelAttribute("pgrq") PageRequest pageRequest, Model model) throws Exception{
+		Board board =service.read(boardNo);
+		model.addAttribute(board);
+		
+		
 	}
 	
 	//게시글 수정 화면
 	@GetMapping(value="/modify")
-	public void modifyForm(int boardNo, Model model) throws Exception{
-		model.addAttribute(service.read(boardNo));
+	@PreAuthorize("hasAnyRole('ROLE_ADMIN','ROLE_MEMBER')")
+	public void modifyForm(int boardNo,@ModelAttribute("pgrq") PageRequest pageRequest, Model model) throws Exception{
+		//조회한 게시글 상세정보를 뷰에 전달한다.
+		Board board = service.read(boardNo);
+		model.addAttribute(board);
 	}
 	
 	//게시글 수정
 	@PostMapping(value="/modify")
 	@PreAuthorize("hasAnyRole('ROLE_ADMIN','ROLE_MEMBER')")
-	public String modify(Board board, RedirectAttributes rttr) throws Exception{
+	public String modify(Board board,PageRequest pageRequest, RedirectAttributes rttr) throws Exception{
 		
 		service.modify(board);
+		
+		//RedirectAttributes 객체에 일회성 데이터를 지정하여 전달한다.
+		rttr.addAttribute("page",pageRequest.getPage());
 		rttr.addFlashAttribute("msg", "SUCCESS");
 		
 		return "redirect:/board/list";
@@ -73,9 +93,12 @@ public class BoardController {
 	//게시글 삭제
 	@PostMapping(value="/remove")
 	@PreAuthorize("hasAnyRole('ROLE_ADMINA','ROLE_MEMBER')")
-	public String remove(int boardNo, RedirectAttributes rttr) throws Exception{
+	public String remove(int boardNo, PageRequest pageRequest, RedirectAttributes rttr) throws Exception{
 		service.remove(boardNo);
+		//RedirectAttributes 객체에 일회성 데이터를 지정하여 전달한다.
+		rttr.addAttribute("page",pageRequest.getPage());
 		rttr.addFlashAttribute("msg","SUCCESS");
 		return "redirect:/board/list";
 	}
+	
 }

@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.shopping.domain.Board;
+import com.shopping.domain.PageRequest;
 import com.shopping.mapper.BoardMapper;
 
 @Service
@@ -22,9 +23,9 @@ public class BoardServiceImple implements BoardService {
 	
 	//게시글 목록
 	@Override
-	public List<Board> list() throws Exception {
+	public List<Board> list(PageRequest pageRequest) throws Exception {
 		// TODO Auto-generated method stub
-		return mapper.list();
+		return mapper.list(pageRequest);
 	}
 	
 	//게시글 상세보기
@@ -47,5 +48,12 @@ public class BoardServiceImple implements BoardService {
 		// TODO Auto-generated method stub
 		mapper.delete(boardNo);
 		
+	}
+	
+	//게시글 전체 건수 조회
+	@Override
+	public int count() throws Exception {
+		// TODO Auto-generated method stub
+		return mapper.count();
 	}
 }

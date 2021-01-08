@@ -28,6 +28,7 @@
 			WHERE board_no >0 
 			ORDER BY board_no DESC, 
 				reg_date DESC 
+			LIMIT #{pageStart},#{sizePerPage}
 		]]>
 	</select>
 	
@@ -55,4 +56,13 @@
 		DELETE FROM board 
 		WHERE board_no =#{boardNo}
 	</delete>
+	
+	<!-- 게시글 전체 수 조회 -->
+	<select id="count" resultType="int">
+		<![CDATA[
+			SELECT count(board_no)
+			FROM board
+			WHERE board_no> 0
+		]]>
+	</select>
 </mapper>
