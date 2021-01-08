@@ -26,4 +26,26 @@ public class BoardServiceImple implements BoardService {
 		// TODO Auto-generated method stub
 		return mapper.list();
 	}
+	
+	//게시글 상세보기
+	@Override
+	public Board read(Integer boardNo) throws Exception {
+		// TODO Auto-generated method stub
+		return mapper.read(boardNo);
+	}
+	
+	//게시글 수정
+	@Override
+	public void modify(Board board) throws Exception {
+		// TODO Auto-generated method stub
+		mapper.update(board);
+	}
+	
+	//게시글 삭제
+	@Override
+	public void remove(Integer boardNo) throws Exception {
+		// TODO Auto-generated method stub
+		mapper.delete(boardNo);
+		
+	}
 }

@@ -30,4 +30,29 @@
 				reg_date DESC 
 		]]>
 	</select>
+	
+	<!-- 게시글 상세 화면 -->
+	<select id="read" resultType="Board">
+		SELECT board_no,
+			title,
+			content,
+			writer,
+			reg_date 
+		FROM board 
+		WHERE board_no= #{#boardNo}
+	</select>
+	
+	<!-- 게시글 수정 -->
+	<update id="update">
+		UPDATE board
+		SET title=#{title},
+			content=#{content}
+		WHERE board_no = #{boardNo}
+	</update>
+	
+	<!-- 게시글 삭제 -->
+	<delete id ="delete">
+		DELETE FROM board 
+		WHERE board_no =#{boardNo}
+	</delete>
 </mapper>

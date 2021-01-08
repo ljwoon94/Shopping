@@ -46,4 +46,36 @@ public class BoardController {
 	public void list(Model model) throws Exception{
 		model.addAttribute("list",service.list());
 	}
+	
+	//회원 게시글 상세화면
+	@GetMapping(value="/read")
+	public void read(int boardNo, Model model) throws Exception{
+		model.addAttribute(service.read(boardNo));
+	}
+	
+	//게시글 수정 화면
+	@GetMapping(value="/modify")
+	public void modifyForm(int boardNo, Model model) throws Exception{
+		model.addAttribute(service.read(boardNo));
+	}
+	
+	//게시글 수정
+	@PostMapping(value="/modify")
+	@PreAuthorize("hasAnyRole('ROLE_ADMIN','ROLE_MEMBER')")
+	public String modify(Board board, RedirectAttributes rttr) throws Exception{
+		
+		service.modify(board);
+		rttr.addFlashAttribute("msg", "SUCCESS");
+		
+		return "redirect:/board/list";
+	} 
+	
+	//게시글 삭제
+	@PostMapping(value="/remove")
+	@PreAuthorize("hasAnyRole('ROLE_ADMINA','ROLE_MEMBER')")
+	public String remove(int boardNo, RedirectAttributes rttr) throws Exception{
+		service.remove(boardNo);
+		rttr.addFlashAttribute("msg","SUCCESS");
+		return "redirect:/board/list";
+	}
 }
