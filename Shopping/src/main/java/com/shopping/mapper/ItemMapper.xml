@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.shopping.mapper.ItemMapper">
+	<!-- 상품 등록 -->
+	<insert id="create">
+		INSERT INTO item
+			(
+				item_name,
+				price,
+				description,
+				picture_url,
+				preview_url
+			)
+		VALUES
+			(
+				#{itemName},
+				#{price},
+				#{description},
+				#{pictureUrl},
+				#{previewUrl}
+			)
+	</insert>
+	
+	<!-- 상품 목록 -->
+	<select id="list" resultType="Item">
+		<![CDATA[
+			SELECT item_id,
+				item_name,
+				price,
+				description,
+				picture_url,
+				preview_url
+			FROM item
+			WHERE item_id >0
+			ORDER BY item_id DESC
+		]]>
+	</select>
+	
+</mapper>
