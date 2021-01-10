@@ -34,7 +34,7 @@ public class ItemController {
 	@PreAuthorize("hasRole('ROLE_ADMIN')")
 	public String registerForm(Model model) {
 		model.addAttribute(new Item());
-		return "Item/register";
+		return "item/register";
 	}
 	
 	//상품등록 처리
