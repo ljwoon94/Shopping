@@ -16,7 +16,8 @@ public interface BoardService {
 	public void modify(Board board) throws Exception;
 	//게시글 삭제
 	public void remove(Integer boardNo) throws Exception;
-	//게시글 전체 건수 조회
-	public int count() throws Exception;
+	//검색된 게시글 전체 건수 조회
+	public int count(PageRequest pageRequest) throws Exception;
 	
+
 }

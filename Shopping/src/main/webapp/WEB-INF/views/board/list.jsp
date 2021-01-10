@@ -8,6 +8,13 @@
 
 <h2><spring:message code = "board.header.list"/></h2>
 
+<!-- 검색 폼 -->
+<form:form modelAttribute="pgrq" method="get" action="list${pgrq.toUriStringForSearchAction(1)}">
+	<form:select path="searchType" items="${searchTypeCodeValueList}" itemValue="value" itemLabel="label"/>
+	<form:input path="keyword"/>
+	<button id='searchBtn'><spring:message code="action.search"/></button>
+</form:form>
+
 <sec:authorize access="hasRole('ROLE_MEMBER')">
 	<a href = "register"><spring:message code="action.new"/></a>
 </sec:authorize>

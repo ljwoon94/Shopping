@@ -52,8 +52,8 @@ public class BoardServiceImple implements BoardService {
 	
 	//게시글 전체 건수 조회
 	@Override
-	public int count() throws Exception {
+	public int count(PageRequest pageRequest) throws Exception {
 		// TODO Auto-generated method stub
-		return mapper.count();
+		return mapper.count(pageRequest);
 	}
 }

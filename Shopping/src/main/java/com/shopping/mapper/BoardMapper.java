@@ -16,7 +16,7 @@ public interface BoardMapper {
 	public void update(Board board) throws Exception;
 	//게시글 삭제
 	public void delete(Integer boardNo) throws Exception;
-	//게시글 전체 수 조회
-	public int count() throws Exception;
+	//검색된 게시글 수 조회
+	public int count(PageRequest pageRequest) throws Exception;
 	
 }

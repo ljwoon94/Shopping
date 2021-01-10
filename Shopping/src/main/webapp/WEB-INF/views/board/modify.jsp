@@ -9,8 +9,12 @@
 
 <form:form modelAttribute="board" action="modify">
 	<form:hidden path="boardNo"/>
-	<!-- 현재 페이지 번호를 숨겨진 피드  -->
-	<input type="hidden" name="page" value="${pgrq.page }">
+	
+	<!-- 현재 페이지 번호, 검색유형, 검색어를 순겨진 필드 요소를 사용하여 전달한다. -->
+	<input type="hidden" name="page" value="${pgrq.page}">
+	<input type="hidden" name="searchType" value="${pgrq.searchType}">
+	<input type="hidden" name="keyword" value="${pgrq.keyword}">
+	
 	<table>
 		<tr>
 			<td><spring:message code="board.title"/></td>
