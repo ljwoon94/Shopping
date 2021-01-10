@@ -43,6 +43,10 @@
 		<put-attribute name="title" value="Login"/>
 		<put-attribute name="content" value="/WEB-INF/views/auth/{1}.jsp"/>
 	</definition>
-
+	<!-- 공지사항 페이지에 대한 레이아웃 템플릿 구성요소를 정의한다. -->
+	<definition name="notice/*" extends="main-template">
+		<put-attribute name="title" value="Notice"/>
+		<put-attribute name="content" value="/WEB-INF/views/notice/{1}.jsp"/>
+	</definition>
 	
 </tiles-definitions>

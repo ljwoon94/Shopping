@@ -11,6 +11,8 @@
 			<sec:authorize access="!isAuthenticated()">
 				<!-- 회원게시판 메뉴 -->
 				<td width="120"><a href="/board/list"><spring:message code="menu.board.member"/></a></td>
+				<!-- 공지사항 메뉴 -->
+				<td width="120"><a href="/notice/list"><spring:message code="menu.notice.member"/></a></td>
 			</sec:authorize>
 			<!-- 인증된 사용자인 경우 true -->
 			<sec:authorize access="isAuthenticated()">
@@ -23,11 +25,16 @@
 					<td width="120"><a href="/user/list"><spring:message code="menu.user.admin"/></a></td>
 					<!-- 회원 게시판 메뉴 -->
 					<td width="120"><a href="/board/list"><spring:message code="menu.board.member"/></a></td>
+					<!-- 공지사항 메뉴 -->
+					<td width="120"><a href="/notice/list"><spring:message code="menu.notice.admin"/></a></td>
+					
 				</sec:authorize>
 				<!-- 회원권한을 가진 사용자인 경우 true -->
 				<sec:authorize access="hasRole('ROLE_MEMBER')">
 					<!-- 회원게시판 메뉴  -->
 					<td width="120"><a href="/board/list"><spring:message code="menu.board.member"/></a></td>
+					<!-- 공지사항 메뉴 -->
+					<td width="120"><a href="/notice/list"><spring:message code="menu.notice.member"/></a></td>
 				</sec:authorize>
 			</sec:authorize>
 			
