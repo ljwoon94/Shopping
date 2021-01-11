@@ -40,10 +40,6 @@
 					<td width="120"><a href="/notice/list"><spring:message code="menu.notice.member"/></a></td>
 					<!-- 상품관리 메뉴 -->
 					<td width="120"><a href="/item/list"><spring:message code="menu.item.member"/></a></td>
-					<!-- 코인충전 메뉴-->
-					<td width="120"><a href="/coin/charge"><spring:message code="menu.coin.charge"/></a></td>
-					<!-- 충전내역 메뉴-->
-					<td width="120"><a href="/coin/list"><spring:message code="menu.coin.list"/></a></td>
 				</sec:authorize>
 			</sec:authorize>
 			
