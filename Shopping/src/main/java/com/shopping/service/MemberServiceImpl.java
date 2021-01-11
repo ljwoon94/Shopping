@@ -93,4 +93,7 @@ public class MemberServiceImpl implements MemberService {
 		memberAuth.setAuth("ROLE_ADMIN");
 		mapper.createAuth(memberAuth);
 	}
+	
+
+	
 }

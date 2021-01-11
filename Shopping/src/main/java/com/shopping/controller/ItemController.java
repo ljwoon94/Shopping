@@ -4,6 +4,7 @@ import java.io.File;
 import java.io.FileInputStream;
 import java.io.InputStream;
 import java.util.List;
+import java.util.Locale;
 import java.util.UUID;
 
 import org.apache.commons.io.IOUtils;
@@ -14,6 +15,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.access.prepost.PreAuthorize;
+import org.springframework.security.core.Authentication;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.util.FileCopyUtils;
@@ -25,7 +27,12 @@ import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import com.shopping.domain.Item;
+import com.shopping.domain.Member;
+import com.shopping.security.domain.CustomUser;
 import com.shopping.service.ItemService;
+import com.shopping.service.MemberService;
+import com.shopping.service.MessageSource;
+import com.shopping.service.UserItemService;
 
 @Controller
 @RequestMapping("/item")
@@ -33,6 +40,15 @@ public class ItemController {
 
 	@Autowired
 	private ItemService itemService;
+	
+	@Autowired
+	private UserItemService userItemService;
+	
+	@Autowired
+	private MemberService memberService;
+	
+	@Autowired
+	private MessageSource messageSource;
 	
 	@Value("${upload.path}")
 	private String uploadPath;
@@ -147,6 +163,33 @@ public class ItemController {
 		return createdFileName;
 	}
 
+	//상품구매처리
+	@PostMapping(value="/buy")
+	public String buy(Integer itemId,RedirectAttributes rttr,
+			Authentication authentication) throws Exception{
+		CustomUser customUser = (CustomUser)authentication.getPrincipal();
+		Member member = customUser.getMember();
+		
+		int userNo = member.getUserNo();
+		member.setCoin(memberService.getCoin(userNo));
+		
+		Item item = itemService.read(itemId);
+		userItemService.register(member, item);
+		
+		String message = messageSource.getMessage("item.purchaseComplete", null, Locale.KOREAN);
+		rttr.addFlashAttribute("msg", message);
+		
+		return "redirect:/item/success";
+	
+	}
+	
+	//상품 구매 성공 화면
+	@GetMapping(value="/success")
+	public String success() throws Exception{
+		return "item/success";
+	}
+	
+	
 	//원본 이미지 표시
 	@ResponseBody
 	@RequestMapping(value="/picture")

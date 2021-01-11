@@ -33,6 +33,7 @@
 	</table>
 </form:form>
 <div>
+	<button type="submit" id="btnBuy"><spring:message code="action.buy"/></button>
 	<button type="submit" id="btnList"><spring:message code="action.list"/></button>
 </div>
 
