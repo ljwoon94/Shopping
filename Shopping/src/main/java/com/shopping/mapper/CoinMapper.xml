@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.shopping.mapper.CoinMapper">
+	<!-- 코인 충전 내역 기록 -->
+	<insert id="create">
+		INSERT INTO charge_coin_history
+			(
+				user_no,
+				amount
+			)
+		VALUES
+			(
+				#{userNo},
+				#{amount}
+			)
+	</insert>
+	
+	<!-- 코인 충전 -->
+	<update id ="charge">
+		UPDATE member 
+		SET coin = (coin+#{amount}),
+			upd_date = now()
+		WHERE user_no =#{userNo} 
+	</update>
+	
+	<!-- 코인 충전 내역 -->
+	<select id="list" resultType="ChargeCoin">
+		<![CDATA[
+			SELECT history_no,
+				user_no,
+				amount,
+				reg_date
+			FROM charge_coin_history
+			WHERE history_no > 0
+			AND user_no =#{userNo}
+			ORDER BY history_no DESC
+		]]>
+	</select>
+</mapper>
