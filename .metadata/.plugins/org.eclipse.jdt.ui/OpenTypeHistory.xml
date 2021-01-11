@@ -11,5 +11,8 @@
     <typeInfo handle="=Shopping/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;com.shopping.service{BoardService.java[BoardService" modifiers="513" timestamp="1610246351554"/>
     <typeInfo handle="=Shopping/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;com.shopping.service{NoticeService.java[NoticeService" modifiers="513" timestamp="1610263020485"/>
     <typeInfo handle="=Shopping/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;com.shopping.service{ItemService.java[ItemService" modifiers="513" timestamp="1610334007581"/>
+<<<<<<< HEAD
     <typeInfo handle="=Shopping/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;com.shopping.service{UserItemService.java[UserItemService" modifiers="513" timestamp="1610376475409"/>
+=======
+>>>>>>> 112506cd2f88f7871484856c1ba7f38202131b19
 </typeInfoHistroy>

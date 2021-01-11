@@ -13200,6 +13200,7 @@ Binding(CTRL+SHIFT+C,
 
 !ENTRY org.eclipse.wst.html.ui 1 1 2021-01-11 23:41:36.124
 !MESSAGE No line style provider for org.eclipse.wst.html.SCRIPT
+<<<<<<< HEAD
 
 !ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-01-11 23:47:59.901
 !MESSAGE ClasspathListenerHandler removeClasspathListener sts4.classpath.seeedePU
@@ -13215,3 +13216,5 @@ Binding(CTRL+SHIFT+C,
 
 !ENTRY org.eclipse.core.resources 4 566 2021-01-11 23:48:01.244
 !MESSAGE Workspace was not properly initialized or has already shutdown.
+=======
+>>>>>>> 112506cd2f88f7871484856c1ba7f38202131b19
