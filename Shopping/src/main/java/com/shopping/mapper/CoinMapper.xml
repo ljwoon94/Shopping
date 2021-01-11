@@ -38,4 +38,28 @@
 			ORDER BY history_no DESC
 		]]>
 	</select>
+	
+	<!-- 코인 지급 -->
+	<update id="pay">
+		UPDATE member
+		SET coin =(coin -#{amount}),
+			upd_date = now()
+		WHERE user_no =#{userNo}
+	</update>
+	
+	<!-- 구매내역 등록 -->
+	<insert id="createPayHistory">
+		INSERT INTO pay_coin_history
+			(
+				user_no,
+				item_id,
+				amount
+			)
+		VALUES
+			(
+				#{userNo},
+				#{itemId},
+				#{amount},
+			)
+	</insert>
 </mapper>

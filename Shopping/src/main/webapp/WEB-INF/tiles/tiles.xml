@@ -58,4 +58,9 @@
 		<put-attribute name="title" value="Coin"/>
 		<put-attribute name="content" value="/WEB-INF/views/coin/{1}.jsp"/>
 	</definition>
+	<!-- 상품 구매 페이지에 대한 레이아웃 템플릿 구성요소를 정의한다. -->
+	<definition name="useritem/*" extends="main-template">
+		<put-attribute name="title" value="UserItem"/>
+		<put-attribute name="content" value="/WEB-INF/views/useritem/{1}.jsp"/>
+	</definition>
 </tiles-definitions>
