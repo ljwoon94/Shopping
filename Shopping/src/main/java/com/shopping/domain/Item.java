@@ -16,7 +16,7 @@ public class Item {
 	private Integer price;
 	private String description;
 	private MultipartFile picture;
-	private String pictureUri;
+	private String pictureUrl;
 	private MultipartFile preview;
 	private String previewUrl;
 }

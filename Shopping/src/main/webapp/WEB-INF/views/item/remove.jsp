@@ -3,52 +3,51 @@
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
 <%@ taglib prefix="spring" uri="http://www.springframework.org/tags"%>
 
-<h2><spring:message code="item.header.register"/></h2>
-<form:form modelAttribute="item" action="register" enctype="multipart/form-data">
+<h2><spring:message code="item.header.remove"/></h2>
+
+<form:form modelAttribute = "item" action="remove">
+	<form:hidden path="itemId"/>
 	<table>
 		<tr>
 			<td><spring:message code="item.itemName"/></td>
-			<td><form:input path="itemName"/></td>
+			<td><form:input path="itemName" disabled="true"/></td>
 			<td><font color="red"><form:errors path="itemName"/></font></td>
 		</tr>
 		<tr>
 			<td><spring:message code="item.itemPrice"/></td>
-			<td><form:input path="price"/>&nbsp;원</td>
+			<td><form:input path="price" disabled="true"/>&nbsp;원</td>
 			<td><font color="red"><form:errors path="price"/></font></td>
 		</tr>
 		<tr>
-			<td><spring:message code="item.itemFile"/></td>
-			<td><input type="file" name="picture"/></td>
-			<td></td>
+			<td><spring:message code="item.picture"/></td>
+			<td><img src="picture?itemId=${item.itemId}" width="210"></td>
 		</tr>
 		<tr>
-			<td><spring:message code="item.itemPreviewFile"/></td>
-			<td><input type="file" name="preview"/></td>
-			<td></td>
+			<td><spring:message code="item.preview"/></td>
+			<td><img src="display?itemId=${item.itemId}" width="210"></td>
 		</tr>
+		
 		<tr>
 			<td><spring:message code="item.itemDescription"/></td>
-			<td><form:textarea path="description"/></td>
-			<td><form:errors path="description"/></td>
+			<td><form:textarea path="description" disabled="true"/></td>
 		</tr>
 	</table>
 </form:form>
-
 <div>
-	<button type="submit" id="btnRegister"><spring:message code="action.register"/></button>
+	<button type="submit" id="btnRemove"><spring:message code="action.remove"/></button>
 	<button type="submit" id="btnList"><spring:message code="action.list"/></button>
+	
 </div>
 
 <script>
 	$(document).ready(function(){
 		var formObj = $("#item");
 		
-		$("#btnRegister").on("click",function(){
+		$("#btnRemove").on("click",function(){
 			formObj.submit();
 		});
-		
 		$("#btnList").on("click",function(){
-			self.location = "list";
+			self.location="list";	
 		});
 	});
 </script>
