@@ -94,6 +94,12 @@ public class MemberServiceImpl implements MemberService {
 		mapper.createAuth(memberAuth);
 	}
 	
+	@Override
+	public int getCoin(int userNo) throws Exception {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
 
 	
 }

@@ -1,5 +1,4 @@
 INDEX VERSION 1.131
-<<<<<<< HEAD
 C:\job\shopping\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\2237615108.index
 \Shopping\src\main\java
 C:\job\shopping\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\531667363.index
@@ -12,16 +11,17 @@ C:\job\shopping\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\2461768971
 \Shopping\src\main\java
 C:\job\shopping\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\3713629874.index
 \Shopping\src\main\java
+C:\job\shopping\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\1971193932.index
+\Shopping\src\main\java
 C:\job\shopping\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\2504459299.index
 \Shopping\src\main\java
 C:\job\shopping\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\1180305720.index
-=======
-C:\job\shopping\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\3332081898.index
->>>>>>> 상품구매
-\Shopping\src\main\java
-C:\job\shopping\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\1971193932.index
-\Shopping\src\main\java
-C:\job\shopping\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\1971193932.index
 \Shopping\src\main\java
 C:\job\shopping\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\1562007633.index
+\Shopping\src\main\java
+C:\job\shopping\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\1057798671.index
+\Shopping\src\main\java
+C:\job\shopping\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\3332081898.index
+\Shopping\src\main\java
+C:\job\shopping\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\3347791793.index
 \Shopping\src\main\java

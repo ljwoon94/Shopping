@@ -80,10 +80,11 @@ CREATE TABLE item(
 );
 
 #사용자 상품 테이블
-CREATE TABLE uesr_item(
+CREATE TABLE user_item(
 	user_item_no INT(5) AUTO_INCREMENT,
     user_item_name VARCHAR(20),
-    item_id INT(5) NOT NULL ,
+    user_no INT(10),
+    item_id INT(10) NOT NULL ,
 	reg_date TIMESTAMP
     DEFAULT now(),
     PRIMARY KEY(user_item_no)
@@ -92,7 +93,7 @@ CREATE TABLE uesr_item(
 #자료실 테이블
 CREATE TABLE pds(
 	item_id INT(5)	AUTO_INCREMENT,
-    item_name VARCHAR(20),
+	item_name VARCHAR(20),
     view_cnt INT(6) DEFAULT 0,
     description VARCHAR(50),
 	PRIMARY KEY (item_id)
@@ -106,7 +107,7 @@ CREATE TABLE pds_attach(
     PRIMARY KEY(fullName)
 );
 #충전내역 테이블
-CREATE TABLE chareg_coin_history(
+CREATE TABLE charge_coin_history(
 	history_no INT AUTO_INCREMENT,
     user_no INT(5) NOT NULL,
     amount INT(5) NOT NULL,

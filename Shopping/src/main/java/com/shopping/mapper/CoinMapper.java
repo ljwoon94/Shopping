@@ -16,4 +16,6 @@ public interface CoinMapper {
 	public void pay(PayCoin payCoin) throws Exception;
 	//구매 내역 등록
 	public void createPayHistory(PayCoin payCoin) throws Exception;
+	
+	public List<PayCoin> listPayHistory(int userNo) throws Exception;
 }

@@ -10,6 +10,7 @@ import java.util.UUID;
 import org.apache.commons.io.IOUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.context.MessageSource;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
@@ -31,8 +32,9 @@ import com.shopping.domain.Member;
 import com.shopping.security.domain.CustomUser;
 import com.shopping.service.ItemService;
 import com.shopping.service.MemberService;
-import com.shopping.service.MessageSource;
 import com.shopping.service.UserItemService;
+
+
 
 @Controller
 @RequestMapping("/item")
@@ -47,6 +49,7 @@ public class ItemController {
 	@Autowired
 	private MemberService memberService;
 	
+	//메시지를 처리할 MessageSource를 필드로 선언한다.
 	@Autowired
 	private MessageSource messageSource;
 	
@@ -167,8 +170,8 @@ public class ItemController {
 	@PostMapping(value="/buy")
 	public String buy(Integer itemId,RedirectAttributes rttr,
 			Authentication authentication) throws Exception{
-		CustomUser customUser = (CustomUser)authentication.getPrincipal();
-		Member member = customUser.getMember();
+		CustomUser customUser =(CustomUser)authentication.getPrincipal();
+		Member member = customUser.getMember(); 
 		
 		int userNo = member.getUserNo();
 		member.setCoin(memberService.getCoin(userNo));
