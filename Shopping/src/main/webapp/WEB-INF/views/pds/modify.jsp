@@ -5,8 +5,9 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ taglib prefix="f" uri="http://java.sun.com/jsp/jstl/fmt" %>
 
-<h2><spring:message code="pds.header.register"/></h2>
-<form:form modelAttribute="pds" action="register" enctype="multipart/form-data">
+<h2><spring:message code="pds.header.modify"/></h2>
+<form:form modelAttribute="pds" action="modify" enctype="multipart/form-data">
+	<form:hidden path="itemId"/>
 	<table>
 		<tr>
 			<td><spring:message code="pds.itemName"/></td>
@@ -30,7 +31,7 @@
 </form:form>
 
 <div>
-	<button type="submit" id="btnRegister"><spring:message code="action.register"/></button>
+	<button type="submit" id="btnModify"><spring:message code="action.modify"/></button>
 	<button type="submit" id="btnList"><spring:message code="action.list"/></button>
 </div>
 
@@ -38,7 +39,7 @@
 	$(document).ready(function(){
 		var formObj = $("#pds");
 		
-		$("#btnRegister").on("click",function(){
+		$("#btnModify").on("click",function(){
 			formObj.submit();
 		});
 		
@@ -53,6 +54,21 @@
 			var idx = fileName.indexOf("_")+1;
 			return fileName.substr(idx);
 		}
+		
+		var itemId =${pds.itemId};
+		//첨부파일 목록조회
+		$.getJSON("/pds/getAttach"+itemId,function(list){
+			$(list).each(function(){
+				console.log("data : "+this);
+				var data = this;
+				
+				console.log("data:" + data);
+				console.log("getOriginalName(data): " + getOriginalName(data));
+				
+				var str="<div><a href='/pds/downloadFile?fullName="+data+"'>"+getOriginalName(data)+"</a>"+"<span>X</span></div>";
+				$(".uploadedList").append(str);
+			});
+		});
 		
 		$("#pds").submit(function(event){
 			event.preventDefault();
@@ -79,7 +95,7 @@
 		
 			$.ajax({
 				url: "/pds/uploadAjax?${_csrf.parameterName}=${_csrf.token}",
-				data: formData,
+				data:formData,
 				dataType="text",
 				processData:false,
 				contentType:false,

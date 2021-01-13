@@ -19,7 +19,15 @@ public interface PdsMapper {
 	public void updateAttachDownCnt(String fullName) throws Exception;
 	//공개자료 조회 건수 업데이트
 	public void updateViewCnt(Integer itemId) throws Exception;
-	//첨부파일 등록
+	//공개자료 등록
 	public void create(Pds item) throws Exception;
+	//공개자료 목록
+	public List<Pds> list() throws Exception;
+	//공개자료 상세화면
+	public Pds read(Integer itemId) throws Exception;
+	//공개자료 수정
+	public void update(Pds item) throws Exception;
+	//공개자료 삭제
+	public void delete(Integer itemId) throws Exception;
 	
 }

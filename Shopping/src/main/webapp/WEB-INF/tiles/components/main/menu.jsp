@@ -15,6 +15,8 @@
 				<td width="120"><a href="/notice/list"><spring:message code="menu.notice.member"/></a></td>
 				<!-- 상품관리 메뉴 -->
 				<td width="120"><a href="/item/list"><spring:message code="menu.item.member"/></a></td>
+				<!-- 자료실 메뉴 -->
+				<td width="120"><a href="/pds/list"><spring:message code="menu.pds.member"/></a></td>
 			</sec:authorize>
 			<!-- 인증된 사용자인 경우 true -->
 			<sec:authorize access="isAuthenticated()">
@@ -31,6 +33,8 @@
 					<td width="120"><a href="/notice/list"><spring:message code="menu.notice.admin"/></a></td>
 					<!-- 상품관리 메뉴 -->
 					<td width="120"><a href="/item/list"><spring:message code="menu.item.admin"/></a></td>
+					<!-- 자료실 메뉴 -->
+					<td width="120"><a href="/pds/list"><spring:message code="menu.pds.admin"/></a></td>
 				</sec:authorize>
 				<!-- 회원권한을 가진 사용자인 경우 true -->
 				<sec:authorize access="hasRole('ROLE_MEMBER')">
@@ -48,6 +52,8 @@
 					<td width="120"><a href="/useritem/list"><spring:message code="menu.useritem.list"/></a></td>
 					<!-- 구매내역 메뉴 -->
 					<td width="120"><a href="/coin/listPay"><spring:message code="menu.coin.listPay"/></a></td>
+					<!-- 자료실 메뉴 -->
+					<td width="120"><a href="/pds/list"><spring:message code="menu.pds.member"/></a></td>
 				</sec:authorize>
 			</sec:authorize>
 			

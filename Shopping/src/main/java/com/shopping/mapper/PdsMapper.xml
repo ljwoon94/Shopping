@@ -59,7 +59,7 @@
 		WHERE item_id =#{itemId}
 	</update>
 	
-	<!--첨부파일 등록  -->
+	<!--공개자료 등록  -->
 	<insert id="create">
 		INSERT INTO pds
 			(
@@ -72,4 +72,41 @@
 				#{description}
 			)
 	</insert>
+	
+	<!-- 공개자료 목록 -->
+	<select id="list" resultType ="Pds">
+		<![CDATA[
+			SELECT item_id,
+				item_name,
+				view_cnt,
+				description
+			FROM pds
+			WHERE item_id > 0'
+			ORDER BY item_id DESC
+		]]>
+	</select>
+	
+	<!-- 공개자료 상세화면 -->
+	<select id ="read" resultType = "Pds">
+		SELECT item_id,
+			item_name,
+			view_cnt,
+			description
+		FROM pds
+		WHERE item_id =#{itemId}
+	</select>
+	
+	<!-- 공개자료 수정 -->
+	<update id="update">
+		UPDATE pds
+		SET item_name =#{itemName},
+			description =#{description}
+		WHERE item_id =#{itemId}
+	</update>
+	
+	<!-- 공개자료 삭제 -->
+	<delete id="delete">
+		DELETE FROM pds
+		WHERE item_id =#{itemId}
+	</delete>
 </mapper>
