@@ -2,6 +2,7 @@ package com.shopping.service;
 
 import java.util.List;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -10,6 +11,7 @@ import com.shopping.mapper.PdsMapper;
 
 @Service
 public class PdsServiceImpl implements PdsService {
+	@Autowired
 	private PdsMapper mapper;
 	
 	//첨부파일 목록

@@ -57,7 +57,7 @@
 		
 		var itemId =${pds.itemId};
 		//첨부파일 목록조회
-		$.getJSON("/pds/getAttach"+itemId,function(list){
+		$.getJSON("/pds/getAttach/"+itemId,function(list){
 			$(list).each(function(){
 				console.log("data : "+this);
 				var data = this;
@@ -76,11 +76,10 @@
 			var str ="";
 			$(".uploadedList a").each(function(index){
 				var value = $(this).attr("href");
-				console.log("value=" + value);
 				value = value.substr(27);
 				str += "<input type='hidden' name ='files["+index+"]' value='"+value+"'>";
 			});
-			console.log("str="+ str);
+			
 			that.append(str);
 			that.get(0).submit();
 		});
@@ -96,14 +95,14 @@
 			$.ajax({
 				url: "/pds/uploadAjax?${_csrf.parameterName}=${_csrf.token}",
 				data:formData,
-				dataType="text",
+				dataType:"text",
 				processData:false,
 				contentType:false,
 				type:"POST",
 				success:function(data){
 					console.log(data);
 					var str="<div><a href='/pds/downloadFile?fullName="+data+"'>"
-							+getOriginalName(data)+"</a>"+"<span>X</span></div>";
+							+getOriginalName(data)+"</a>"+"<span>X</span></div></div>";
 					$(".uploadedList").append(str);
 				}
 			});

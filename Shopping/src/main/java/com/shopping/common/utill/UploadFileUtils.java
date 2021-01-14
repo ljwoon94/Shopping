@@ -1,4 +1,4 @@
-package com.shopping.utill;
+package com.shopping.common.utill;
 
 import java.io.File;
 import java.text.DecimalFormat;
@@ -37,7 +37,7 @@ public class UploadFileUtils {
 	private static String calcPath(String uploadPath) {
 		Calendar cal = Calendar.getInstance();
 		
-		String yearPath = File.separator + cal.getInstance();
+		String yearPath = File.separator + cal.get(Calendar.YEAR);
 		
 		String monthPath = yearPath + File.separator + new DecimalFormat("00").format(cal.get(Calendar.MONTH)+1);
 		

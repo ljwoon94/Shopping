@@ -80,7 +80,7 @@
 			$.ajax({
 				url: "/pds/uploadAjax?${_csrf.parameterName}=${_csrf.token}",
 				data: formData,
-				dataType="text",
+				dataType: "text",
 				processData:false,
 				contentType:false,
 				type:"POST",

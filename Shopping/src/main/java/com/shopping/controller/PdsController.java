@@ -22,9 +22,9 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
+import com.shopping.common.utill.UploadFileUtils;
 import com.shopping.domain.Pds;
 import com.shopping.service.PdsService;
-import com.shopping.utill.UploadFileUtils;
 
 @Controller
 @RequestMapping("/pds")

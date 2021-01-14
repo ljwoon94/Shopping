@@ -81,7 +81,7 @@
 				view_cnt,
 				description
 			FROM pds
-			WHERE item_id > 0'
+			WHERE item_id > 0
 			ORDER BY item_id DESC
 		]]>
 	</select>

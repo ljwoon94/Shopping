@@ -43,7 +43,7 @@
 	});
 </script>
 <script type="text/javascript">
-	$(document).on("click",function(){
+	$(document).ready(function(){
 		function getOriginalName(fileName){
 			var idx= fileName.indexOf("_") +1;
 			return fileName.substr(idx);
@@ -51,19 +51,20 @@
 		
 		var itemId = ${pds.itemId};
 		console.log("itemId : " + itemId);
-	});
 	
-	//첨부파일 목록 조회
-	$.getJSON("/pds/getAttach"+itemId,function(list){
-		$(list).each(function(){
-			console.log("data : "+this);
-			var data = this;
-			
-			console.log("data:" + data);
-			console.log("getOriginalName(data): " + getOriginalName(data));
-			
-			var str="<div><a href='/pds/downloadFile?fullName="+data+"'>"+getOriginalName(data)+"</a></div>";
-			$(".uploadedList").append(str);
+	
+		//첨부파일 목록 조회
+		$.getJSON("/pds/getAttach/"+itemId,function(list){
+			$(list).each(function(){
+				console.log("data : "+this);
+				var data = this;
+				
+				console.log("data:" + data);
+				console.log("getOriginalName(data): " + getOriginalName(data));
+				
+				var str="<div><a href='/pds/downloadFile?fullName="+data+"'>"+getOriginalName(data)+"</a></div>";
+				$(".uploadedList").append(str);
+			});
 		});
 	});
 </script>
