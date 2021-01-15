@@ -10,6 +10,7 @@ import com.shopping.domain.Item;
 import com.shopping.domain.Member;
 import com.shopping.domain.PayCoin;
 import com.shopping.domain.UserItem;
+import com.shopping.exception.NotEnoughCoinException;
 import com.shopping.mapper.CoinMapper;
 import com.shopping.mapper.UserItemMapper;
 
@@ -27,7 +28,8 @@ public class UserItemServiceImpl implements UserItemService {
 	public void register(Member member, Item item) throws Exception {
 		// TODO Auto-generated method stub
 		int userNo = member.getUserNo();
-		
+		//회원이 가진 코인을 가져온다
+		int coin = member.getCoin();
 		int itemId = item.getItemId();
 		int price = item.getPrice();
 		
@@ -35,15 +37,17 @@ public class UserItemServiceImpl implements UserItemService {
 		userItem.setUserNo(userNo);
 		userItem.setItemId(itemId);
 		
+		//사용자의 코인이 부족한지를 체크한다.
+		if(coin < price) {
+			throw new NotEnoughCoinException("There is Not Enough Coin.");
+		}
+		
 		PayCoin payCoin = new PayCoin();
 		payCoin.setUserNo(userNo);
 		payCoin.setItemId(itemId);
 		payCoin.setAmount(price);
 		
-		//코인 지급
 		coinMapper.pay(payCoin);
-		
-		//구매 내역 등록
 		coinMapper.createPayHistory(payCoin);
 		
 		mapper.create(userItem);
@@ -60,4 +64,6 @@ public class UserItemServiceImpl implements UserItemService {
 		// TODO Auto-generated method stub
 		return mapper.read(userItemNo);
 	}
+	
+
 }

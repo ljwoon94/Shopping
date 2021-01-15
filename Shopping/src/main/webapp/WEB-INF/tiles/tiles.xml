@@ -68,5 +68,9 @@
 		<put-attribute name="title" value="Pds"/>
 		<put-attribute name="content" value="/WEB-INF/views/pds/{1}.jsp"/>
 	</definition>
-
+	<!-- 에러페이지에 대한 레이아웃 템플릿 구성요소를 정의한다. -->
+	<definition name="error/*" extends="common-template">
+		<put-attribute name="title" value ="Error"/>
+		<put-attribute name="content" value ="/WEB-INF/views/error/{1}.jsp"/>
+	</definition>
 </tiles-definitions>

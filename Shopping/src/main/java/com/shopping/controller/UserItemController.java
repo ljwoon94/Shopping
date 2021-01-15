@@ -21,6 +21,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 
 import com.shopping.domain.Member;
 import com.shopping.domain.UserItem;
+import com.shopping.exception.NotMyItemException;
 import com.shopping.security.domain.CustomUser;
 import com.shopping.service.UserItemService;
 
@@ -58,6 +59,14 @@ public class UserItemController {
 			Authentication authentication) throws Exception{
 		
 		UserItem userItem =service.read(userItemNo);
+		
+		//구매한 상품이 사용자의 것인지 체크한다.
+		CustomUser customUser =(CustomUser)authentication.getPrincipal();
+		Member member = customUser.getMember();
+		if(userItem.getUserNo() != member.getUserNo()) {
+			throw new NotMyItemException("It is Not My Item.");
+		}
+		
 		String fullName = userItem.getPictureUrl();
 		
 		InputStream in = null;
@@ -83,5 +92,13 @@ public class UserItemController {
 			in.close();
 		}
 		return entity;
+	}
+	
+	//본인 상품 예외 처리
+	@GetMapping(value="/notMyItem")
+	@PreAuthorize("hasAnyRole('ROLE_ADMIN','ROLE_MEMBER')")
+	public void notMyItem(Model model) throws Exception{
+		
+		
 	}
 }
