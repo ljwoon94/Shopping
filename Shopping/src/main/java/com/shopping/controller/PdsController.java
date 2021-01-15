@@ -22,9 +22,9 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
-import com.shopping.common.utill.UploadFileUtils;
 import com.shopping.domain.Pds;
 import com.shopping.service.PdsService;
+import com.shopping.util.UploadFileUtils;
 
 @Controller
 @RequestMapping("/pds")
@@ -114,7 +114,7 @@ public class PdsController {
 	
 	//첨부파일 업로드 처리
 	@ResponseBody
-	@PostMapping(value="/uploadAjax",produces = "text/plain;charset+UTF-8")
+	@PostMapping(value="/uploadAjax",produces = "text/plain;charset=UTF-8")
 	@PreAuthorize("hasRole('ROLE_ADMIN')")
 	public ResponseEntity<String> uploadAjax(MultipartFile file) throws Exception{
 		String savedName = UploadFileUtils.uploadFile(uploadPath, file.getOriginalFilename(), file.getBytes());

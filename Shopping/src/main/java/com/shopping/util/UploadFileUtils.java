@@ -1,4 +1,4 @@
-package com.shopping.common.utill;
+package com.shopping.util;
 
 import java.io.File;
 import java.text.DecimalFormat;
@@ -14,12 +14,15 @@ public class UploadFileUtils {
 	
 	public static String uploadFile(String uploadPath, String originalName,
 			byte[] fileData) throws Exception{
+		//겹쳐지지 않는 파일명을 위한 유니크값 생성
 		UUID uid = UUID.randomUUID();
+		//원본 파일 이름과 UUID 결합
 		String savedName = uid.toString() +"_"+originalName;
+		//파일을 저장할 폴더 생성(년 월 일 기준)
 		String savedPath = calcPath(uploadPath);
-		
+		//저장할 파일 준비
 		File target = new File(uploadPath + savedPath,savedName);
-		
+		//파일 저장
 		FileCopyUtils.copy(fileData, target);
 		
 		String uploadedFileName = makeUploadedFileName(uploadPath,savedPath,savedName);

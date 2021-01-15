@@ -1,9 +1,0 @@
-diff a/Shopping/src/main/resources/messages.properties b/Shopping/src/main/resources/messages.properties	(rejected hunks)
-@@ -16,6 +16,7 @@
- action.logout = \ub85c\uadf8\uc544\uc6c3
- action.home = \ud648\uc73c\ub85c \uac00\uae30
- action.search = \uac80\uc0c9
-+action.charge = \ucda9\uc804
- 
- #\ucf54\ub4dc \uadf8\ub8f9 \ud398\uc774\uc9c0\uc5d0 \uc0ac\uc6a9\ub420 \uba54\uc138\uc9c0 \uc815\uc758
- codegroup.groupCode = \ucf54\ub4dc\uadf8\ub8f9\ucf54\ub4dc

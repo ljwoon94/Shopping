@@ -64,6 +64,7 @@ public class PdsServiceImpl implements PdsService {
 	}
 	
 	//공개자료 수정
+	@Transactional
 	@Override
 	public void modify(Pds item) throws Exception {
 		// TODO Auto-generated method stub
@@ -83,6 +84,7 @@ public class PdsServiceImpl implements PdsService {
 	}
 	
 	//공개자료 삭제
+	@Transactional
 	@Override
 	public void remove(Integer itemId) throws Exception {
 		// TODO Auto-generated method stub

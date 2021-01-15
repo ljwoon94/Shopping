@@ -16,7 +16,7 @@
 		<tr>
 			<td><spring:message code="pds.itemFile"/></td>
 			<td>
-				<input type="file" name="inputFile"/>
+				<input type="file" id="inputFile"/>
 				<div class="uploadedList"></div>
 			</td>
 			<td></td>
