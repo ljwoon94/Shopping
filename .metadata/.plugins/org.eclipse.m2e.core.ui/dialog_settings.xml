@@ -87,6 +87,7 @@
 	</section>
 	<section name="MavenProjectImportWizardPage">
 		<list key="rootDirectory">
+			<item value="C:\job\ch2028"/>
 			<item value="C:\job\shopping"/>
 		</list>
 		<list key="projectNameTemplate">

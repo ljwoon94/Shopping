@@ -6,13 +6,16 @@ import org.springframework.web.servlet.HandlerInterceptor;
 import org.springframework.web.servlet.config.annotation.InterceptorRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 
+import com.shopping.interceptor.AccessLoggingInterceptor;
+
 @Configuration
 public class IntercepterConfig implements WebMvcConfigurer {
+	
 	@Override
-	public void addInterCeptor(InterceptorRegistry registry) {
-		registry.addInterceptor(accessLoggingInterceptor()).
-		addPathPatterns("/**").
-		excludePathPatterns("/resources/**");
+	public void addInterceptors(InterceptorRegistry registry) {
+		registry.addInterceptor(accessLoggingInterceptor())
+		.addPathPatterns("/**")
+		.excludePathPatterns("/resources/**");
 	}
 	
 	@Bean
