@@ -19,11 +19,11 @@ import lombok.extern.java.Log;
 @Component
 @Aspect
 public class TimeCheckerAdvice {
+
 	@Autowired
 	private PerformanceLogService service;
-	
-	//서비스 성능 로깅 처리
-	@Around("execution(* com.shopping.service.*Service*.*(..))")
+
+	@Around("execution(* org.hdcd.service.*Service*.*(..))")
 	public Object timeLog(ProceedingJoinPoint pjp) throws Throwable {
 
 		long startTime = System.currentTimeMillis();
@@ -56,4 +56,5 @@ public class TimeCheckerAdvice {
 		
 		return result;
 	}
+
 }

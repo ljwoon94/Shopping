@@ -7,12 +7,13 @@ import org.springframework.stereotype.Service;
 
 import com.shopping.domain.PerformanceLog;
 import com.shopping.mapper.PerformanceLogMapper;
+
 @Service
 public class PerformanceLogServiceImpl implements PerformanceLogService {
-	
+
 	@Autowired
 	private PerformanceLogMapper mapper;
-	//서비스 성능 로깅 처리
+	
 	@Override
 	public void register(PerformanceLog performanceLog) throws Exception {
 		// TODO Auto-generated method stub

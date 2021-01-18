@@ -10,7 +10,7 @@ import com.shopping.interceptor.AccessLoggingInterceptor;
 
 @Configuration
 public class IntercepterConfig implements WebMvcConfigurer {
-	
+
 	@Override
 	public void addInterceptors(InterceptorRegistry registry) {
 		registry.addInterceptor(accessLoggingInterceptor())
